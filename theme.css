@@ -78,7 +78,7 @@ body.theme-dark.theme-black{
   --background-secondary:#111 !important;
 }
 
-.theme-dark:not(.theme-blacklack) .workspace-ribbon.mod-left,.theme-dark:not(.theme-black) .workspace-tab-header.is-active,.theme-dark:not(.theme-black) .workspace-tab-header-container,.theme-dark.is-hidden-frameless:not(.is-fullscreen,.theme-black) .workspace-tabs.mod-top-left-space .workspace-tab-header-container:before,.theme-dark:not(.theme-black) .workspace-tab-header-inner{
+.theme-dark:not(.theme-black) .workspace-ribbon.mod-left,.theme-dark:not(.theme-black) .workspace-tab-header.is-active,.theme-dark:not(.theme-black) .workspace-tab-header-container,.theme-dark.is-hidden-frameless:not(.is-fullscreen,.theme-black) .workspace-tabs.mod-top-left-space .workspace-tab-header-container:before,.theme-dark:not(.theme-black) .workspace-tab-header-inner{
 	background-color: hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) * 0.25)) !important;
 }
 
@@ -91,6 +91,10 @@ body.theme-dark.theme-black{
 .workspace-ribbon.mod-left{
 	background-color: var(--color-base-00);
 	border-right:1px solid hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.08) !important;
+}
+
+.theme-dark.theme-black .workspace-ribbon.mod-left{
+  background-color: #111 !important;
 }
 
 .workspace-ribbon.mod-left:before{
