@@ -408,6 +408,10 @@ body:not(.title-underline) .HyperMD-header{
 }
 
 
+.inline-title,.cm-header,h1,h2,h3,h4,h5,h6{
+  letter-spacing: var(--letter-spacing-title);
+}
+
 /* Bold and italic */
 .bold-italic-accent .cm-em, .bold-italic-accent .cm-strong,.bold-italic-accent em,.bold-italic-accent strong{
 	color:var(--color-accent) !important;
@@ -800,6 +804,15 @@ settings:
         title: Choose title font
         type: variable-text
         default: '"Avenir Next Cyr"'
+    -
+        id: letter-spacing-title
+        title: Choose letter spacing for titles
+        type: variable-number-slider
+        default: 0
+        min: 0
+        max: 10
+        step: 0.2
+        format: px
     -
         id: h1-weight
         title: Choose H1 font weight
