@@ -24,5 +24,16 @@ Firstly, install the [Style Settings plugin](https://github.com/mgmeyers/obsidia
 ### Choose a specific font for titles
 <img width="1433" alt="Capture d’écran 2023-05-12 à 16 46 12" src="https://github.com/Thiews/obsidian-simplicity/assets/29182877/4d5311a1-2ec5-4628-a0ef-38b5c507d317">
 
-### Make bold and italic pop
+### Make bold and italic pop and customize links
+<img width="1351" alt="Capture d’écran 2023-05-12 à 18 02 40" src="https://github.com/Thiews/obsidian-simplicity/assets/29182877/705d3de4-4f23-4a2d-b011-d5b674f78819">
 
+### Activate focus mode when writing
+<img width="1405" alt="Capture d’écran 2023-05-12 à 18 05 14" src="https://github.com/Thiews/obsidian-simplicity/assets/29182877/e6e16486-a40a-4d72-b8c3-a99422cf4b17">
+
+### Make a page full width
+Just write `cssclass : full-width` between two `---` like this:
+
+<img width="1427" alt="Capture d’écran 2023-05-12 à 18 11 45" src="https://github.com/Thiews/obsidian-simplicity/assets/29182877/a75d710f-55b6-4681-ba2a-062fb0cf5f46">
+
+
+**Give it a try and play with it !**
