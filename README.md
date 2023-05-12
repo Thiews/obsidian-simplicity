@@ -23,3 +23,6 @@ Firstly, install the [Style Settings plugin](https://github.com/mgmeyers/obsidia
 
 ### Choose a specific font for titles
 <img width="1433" alt="Capture d’écran 2023-05-12 à 16 46 12" src="https://github.com/Thiews/obsidian-simplicity/assets/29182877/4d5311a1-2ec5-4628-a0ef-38b5c507d317">
+
+### Make bold and italic pop
+
