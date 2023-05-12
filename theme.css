@@ -409,7 +409,7 @@ body:not(.title-underline) .HyperMD-header{
 
 
 .inline-title,.cm-header,h1,h2,h3,h4,h5,h6{
-  letter-spacing: var(--letter-spacing-title);
+  letter-spacing: var(--letter-spacing-title) !important;
 }
 
 /* Bold and italic */
