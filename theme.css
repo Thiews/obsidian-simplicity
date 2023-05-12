@@ -549,6 +549,14 @@ hr{
 	border-top-color:hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.15) !important;
 }
 
+/* Menu popover */
+
+.menu{
+  background-color: var(--background-primary);
+  border:0px solid !important;
+  box-shadow: 0px 0px 3px 1px var(--color-base-25);
+}
+
 /* Search results */
 
 .theme-light .search-result-file-matched-text{
