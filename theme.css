@@ -52,42 +52,39 @@ body{
 	--tab-outline-color:hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.08) !important;
 }
 
+body{
+    --color-accent:#4F60B3;
+    --titlebar-background:transparent !important;
+  --titlebar-background-focused:transparent !important;
+    font-family:"Avenir Next Cyr" !important;
+}
 
 @media(min-width:900px){ body {
 	--background-secondary:hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.06) !important;
-	//font-family:"Avenir Next Cyr" !important;
-	--color-accent:#4F60B3;
 }}
+
 
 .theme-light {
 	--text-normal:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) * 0.45));
 	--color-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-l)) !important;
-	--nav-item-background-hover:hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.05) !important;
-	--titlebar-background:var(--color-base-00) !important;
-	--titlebar-background-focused:ar(--color-base-00)  !important;
 }
 
-body.theme-dark{
-	--background-primary:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) * 0.25));
-	--tab-container-background:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) * 0.25)) !important;
-	--titlebar-background:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) * 0.25)) !important;
-	--titlebar-background-focused:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) * 0.25)) !important;
+body.theme-dark:not(.theme-black){
+  --background-primary:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) * 0.25));
 }
 
-.theme-dark .workspace-ribbon.mod-left,.theme-dark .workspace-tab-header.is-active,.theme-dark .workspace-tab-header-container,.theme-dark.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container:before,.theme-dark .workspace-tab-header-inner{
+body.theme-dark.theme-black{
+  --background-primary:#111!important;
+  --background-secondary:#111 !important;
+}
+
+.theme-dark:not(.theme-blacklack) .workspace-ribbon.mod-left,.theme-dark:not(.theme-black) .workspace-tab-header.is-active,.theme-dark:not(.theme-black) .workspace-tab-header-container,.theme-dark.is-hidden-frameless:not(.is-fullscreen,.theme-black) .workspace-tabs.mod-top-left-space .workspace-tab-header-container:before,.theme-dark:not(.theme-black) .workspace-tab-header-inner{
 	background-color: hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) * 0.25)) !important;
 }
 
 .full-width{
 	--file-line-width:95% !important;
 }
-
-/*body:not(.ribbon-off.tab-header-off){
-	border-top:30px solid var(--color-base-00);
-	border-right:30px solid var(--color-base-00);
-	border-bottom:30px solid var(--color-base-00);
-	box-shadow: inset 05px 05px 5px 5px #222 !important;
-}*/
 
 /* Workspace */
 
@@ -117,12 +114,14 @@ body.theme-dark{
 	//border-right:0px solid var(--color-base-25) !important;
 	//box-shadow:0px 1px 13px 1px var(--color-base-25) !important;
 	border-right:1px solid hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.08) !important;
+  opacity:0;
 }
 
 
 .ribbon-off .workspace-ribbon.mod-left:hover{
 	flex:0 0 var(--ribbon-width);
 	transition:0.2s;
+  opacity:1;
 }
 
 .clickable-icon.side-dock-ribbon-action{
@@ -262,8 +261,6 @@ body:not(.nav-2) .tree-item-self:hover{
 	border-radius:0px !important;
 }
 
-
-
 .collapse-icon svg.svg-icon{
 	color:var(--color-accent) !important;
 }
@@ -305,7 +302,7 @@ body:not(.nav-2) .nav-folder-title{
 }
 
 .is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container:before{
-	background-color:var(--color-base-00);
+	background-color:transparent !important;
 }
 
 .is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container{
@@ -772,6 +769,10 @@ settings:
     -
         id: nav-2
         title:  Other folder navigation panel style
+        type: class-toggle
+    -
+        id: theme-black
+        title:  Black background for dark theme
         type: class-toggle
     -
         id: focus
