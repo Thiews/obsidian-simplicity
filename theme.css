@@ -214,11 +214,26 @@ body:not(.nav-2) .nav-file{
 	//padding-left:3.5em;
 }
 
-.nav-2 .nav-file{
+.nav-2:not(.theme-black)  .nav-file{
 	background-color: hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.08);
 	margin-bottom:0.3em;
 	border-radius:3px 0px 0px 3px !important;
 	border-radius:0px !important;
+}
+
+.nav-2.theme-black .nav-file{
+  background-color: hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.03) !important;
+  margin-bottom:0.3em;
+  border-radius:3px 0px 0px 3px !important;
+  border-radius:0px !important;
+}
+
+.nav-2.theme-black {
+  --nav-item-background-hover: hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.03) !important;
+}
+
+.nav-2.theme-light{
+  --nav-item-background-hover: transparent !important;
 }
 
 body:not(.nav-2) .tree-item-self.is-active,body:not(.nav-2) .tree-item-self.is-active:hover{
@@ -229,7 +244,7 @@ body:not(.nav-2) .tree-item-self.is-active,body:not(.nav-2) .tree-item-self.is-a
 	font-weight:400 !important;
 }
 
-body:not(.nav-2) .tree-item-self:hover{
+body .tree-item-self:hover{
 	background-color: transparent !important;
 	border-radius:0px !important;
 	color:var(--color-accent) !important;
@@ -243,6 +258,7 @@ body:not(.nav-2) .tree-item-self:hover{
 	font-weight:600 !important;
 	color:var(--color-accent) !important;
 	border-radius:0px !important;
+  transition: 0.2s;
 }
 
 .collapse-icon svg.svg-icon{
