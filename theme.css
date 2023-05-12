@@ -42,13 +42,13 @@
 /* Variables */
 
 body{
-	--accent-h:230;
-	--accent-s:58%;
-	--accent-l:44%;
-	--h1-weight:600;
-	--h2-weight:600;
-	--h3-weight:600;
-	--h4-weight:600;
+	--accent-h:180;
+	--accent-s:45%;
+	--accent-l:46%;
+	--h1-weight:400;
+	--h2-weight:400;
+	--h3-weight:400;
+	--h4-weight:400;
 	--tab-outline-color:hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.08) !important;
 }
 
@@ -347,8 +347,11 @@ body .tree-item:not(.is-collapsed) .nav-folder-title .nav-folder-title-content{
 	background-color: var(--color-base-00);
 }
 
-.bold-italic-accent .mod-left-split .nav-action-button{
+.mod-left-split .nav-action-button{
 	color:var(--color-accent);
+}
+
+.bold-italic-accent .mod-left-split .nav-action-button{
 	filter:hue-rotate(var(--hue-bold-italic));
 }
 
@@ -387,10 +390,17 @@ body .tree-item:not(.is-collapsed) .nav-folder-title .nav-folder-title-content{
 	margin:x !important;
 }
 
+
+
 body:not(.title-underline) .HyperMD-header{
 	padding-bottom: 0.7em !important;
 	padding-top:0.8em !important;
 }
+
+.HyperMD-header >* .HyperMD-header{
+  margin-top:-1em;
+}
+
 
 .inline-title,.cm-header,h1,h2,h3,h4,h5,h6{
 	font-family:var(--font-title) !important;
@@ -758,7 +768,7 @@ settings:
         type: variable-color
         Description : Choose a the main color
         format: hsl-split
-        default: '#2F45B2'
+        default: '#41ACAC'
     -
         id: nav-2
         title:  Other folder navigation panel style
@@ -817,22 +827,22 @@ settings:
         id: h1-weight
         title: Choose H1 font weight
         type: variable-number
-        default: 600
+        default: 400
     -
         id: h2-weight
         title: Choose H2 font weight
         type: variable-number
-        default: 600
+        default: 400
     -
         id: h3-weight
         title: Choose H3 font weight
         type: variable-number
-        default: 600
+        default: 400
     -
         id: h4-weight
         title: Choose H4 font weight
         type: variable-number
-        default: 600
+        default: 400
     -
         id: pop
         title: 4. Make pages pop (bold and italic accentuation, blockquotes, links)
