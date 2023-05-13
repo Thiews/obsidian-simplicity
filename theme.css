@@ -228,12 +228,12 @@ body:not(.nav-2) .nav-file{
   border-radius:0px !important;
 }
 
-.nav-2.theme-black {
+.theme-dark.theme-black {
   --nav-item-background-hover: hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.03) !important;
 }
 
-.nav-2.theme-light{
-  --nav-item-background-hover: transparent !important;
+.theme-light{
+  --nav-item-background-hover:hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.03) !important;
 }
 
 body:not(.nav-2) .tree-item-self.is-active,body:not(.nav-2) .tree-item-self.is-active:hover{
@@ -245,12 +245,10 @@ body:not(.nav-2) .tree-item-self.is-active,body:not(.nav-2) .tree-item-self.is-a
 }
 
 body .tree-item-self:hover{
-	background-color: transparent !important;
 	border-radius:0px !important;
 	color:var(--color-accent) !important;
 	font-weight:400 !important;
 	border-right:0px solid !important;
-	transition: 0.2s;
 }
 
 .nav-2 .tree-item-self.is-active:hover, .nav-2 .tree-item-self.is-active{
@@ -258,7 +256,6 @@ body .tree-item-self:hover{
 	font-weight:600 !important;
 	color:var(--color-accent) !important;
 	border-radius:0px !important;
-  transition: 0.2s;
 }
 
 .collapse-icon svg.svg-icon{
