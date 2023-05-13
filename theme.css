@@ -836,23 +836,35 @@ settings:
     -
         id: h1-weight
         title: Choose H1 font weight
-        type: variable-number
+        type: variable-number-slider
         default: 400
+        min: 300
+        max: 800
+        step: 100
     -
         id: h2-weight
         title: Choose H2 font weight
-        type: variable-number
+        type: variable-number-slider
         default: 400
+        min: 300
+        max: 800
+        step: 100
     -
         id: h3-weight
         title: Choose H3 font weight
-        type: variable-number
+        type: variable-number-slider
         default: 400
+        min: 300
+        max: 800
+        step: 100
     -
         id: h4-weight
         title: Choose H4 font weight
-        type: variable-number
+        ttype: variable-number-slider
         default: 400
+        min: 300
+        max: 800
+        step: 100
     -
         id: pop
         title: 4. Make pages pop (bold and italic accentuation, blockquotes, links)
