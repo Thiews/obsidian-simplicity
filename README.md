@@ -24,6 +24,9 @@ Firstly, install the [Style Settings plugin](https://github.com/mgmeyers/obsidia
 ### Choose a specific font for titles
 <img width="1433" alt="Capture d’écran 2023-05-12 à 16 46 12" src="https://github.com/Thiews/obsidian-simplicity/assets/29182877/4d5311a1-2ec5-4628-a0ef-38b5c507d317">
 
+### Active a rounded style
+<img width="1431" alt="Capture d’écran 2023-05-14 à 19 51 12" src="https://github.com/Thiews/obsidian-simplicity/assets/29182877/24adcc74-51c9-4970-ba5b-4872e1a51af9">
+
 ### Make bold and italic pop and customize links
 <img width="1351" alt="Capture d’écran 2023-05-12 à 18 02 40" src="https://github.com/Thiews/obsidian-simplicity/assets/29182877/705d3de4-4f23-4a2d-b011-d5b674f78819">
 
