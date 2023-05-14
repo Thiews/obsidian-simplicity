@@ -185,15 +185,19 @@ body.theme-dark.theme-black{
   border-bottom:none !important;
 }
 
-.theme-rounded.theme-light .workspace-ribbon.mod-left,.theme-dark.theme-rounded .workspace-ribbon.mod-left,.theme-rounded.theme-light .workspace-ribbon.mod-left:before{
+.theme-rounded.theme-light .workspace-ribbon.mod-left,.theme-dark.theme-rounded .workspace-ribbon.mod-left{
   border-right:none !important;
   background-color:hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.05) !important;
 }
 
+.theme-rounded.theme-light .workspace-ribbon.mod-left:before,.theme-dark.theme-rounded:not(.theme-black) .workspace-ribbon.mod-left:before,.theme-dark.theme-rounded.theme-black .workspace-ribbon.mod-left:before{
+  background-color: transparent !important;
+}
 
-.theme-dark.theme-rounded:not(.theme-black) .workspace-ribbon.mod-left,.theme-dark.theme-rounded:not(.theme-black) .workspace-ribbon.mod-left:before{
-  border-right:none !important;
+
+.theme-dark.theme-rounded:not(.theme-black) .workspace-ribbon.mod-left{
   background-color:hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.06) !important;
+}
 }
 
 .theme-rounded .workspace-tab-header.is-active,.theme-rounded .workspace-tab-header{
@@ -210,8 +214,8 @@ body.theme-dark.theme-black{
 }
 
 .theme-rounded .workspace-tab-container{
-  border-radius: 40px;
-  border:15px solid transparent !important;
+  border-radius: 30px;
+  border:12px solid transparent !important;
 }
 
 .theme-rounded .workspace-leaf-resize-handle{
@@ -236,8 +240,9 @@ body.theme-dark.theme-black{
   background-color:hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.05) !important; 
 }
 
-.theme-rounded.theme-dark.theme-black .workspace-ribbon.mod-left,.theme-dark.theme-rounded.theme-black .workspace-ribbon.mod-left:before{
-  background-color:hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.02) !important; 
+.theme-rounded.theme-dark.theme-black .workspace-ribbon.mod-left{
+  //background-color:hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.02) !important; 
+  background-color: #111 !important;
 }
 
 /* Full width page */
