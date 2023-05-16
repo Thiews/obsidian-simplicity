@@ -1,43 +1,6 @@
 /* ----------- THEME SIMPLICITY made by Thiews ------------------- */
 
-//* ————————— Loaded fonts ———————————————— */
-
-/* Fonts from Google */
-
-@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Spartan:wght@300;400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+//* ----------- fonts ———————————————— */
 
 /* iA Writer Mono */
 
@@ -764,6 +727,12 @@ hr{
   box-shadow: 0px 0px 3px 1px var(--color-base-25);
 }
 
+/* block embed */
+
+.markdown-embed-link{
+  right:-5px;
+}
+
 /* Search results */
 
 .theme-light .search-result-file-matched-text{
@@ -1004,65 +973,8 @@ settings:
         title:  Hide formatting in writing mode (can be tricky!)
         type: class-toggle
     -
-        id: typography
-        title: 3. Personnalize interface and text font
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        id: font-interface
-        title: Choose the interface font
-        type: variable-select
-        default: "Avenir Next Cyr"
-        options:
-            - "Avenir Next Cyr"
-            - ia writer mono v
-            - ia writer quattro v
-            - source sans pro
-            - jost
-            - mulish
-            - nunito
-            - lato
-            - poppins
-            - dosis
-            - oswald
-            - source sans pro
-            - "Open Sans"
-            - dm sans
-            - montserrat
-            - "Heebo"
-            - quicksand
-            - anton
-            - lora
-            - "Hind Siliguri"
-    -
-        id: font-text
-        title: Choose the text font
-        type: variable-select
-        default: "Avenir Next Cyr"
-        options:
-            - "Avenir Next Cyr"
-            - ia writer mono v
-            - ia writer quattro v
-            - source sans pro
-            - jost
-            - mulish
-            - nunito
-            - lato
-            - poppins
-            - dosis
-            - oswald
-            - source sans pro
-            - "Open Sans"
-            - dm sans
-            - montserrat
-            - "Heebo"
-            - quicksand
-            - anton
-            - lora
-    -
         id: headers
-        title: 4. Personnalize headers
+        title: 3. Personnalize headers
         type: heading
         level: 2
         collapsed: true
@@ -1077,28 +989,8 @@ settings:
     -
         id: font-title
         title: Choose title font
-        type: variable-select
+        type: variable-text
         default: "Avenir Next Cyr"
-        options:
-            - "Avenir Next Cyr"
-            - ia writer mono v
-            - ia writer quattro v
-            - source sans pro
-            - jost
-            - mulish
-            - nunito
-            - lato
-            - poppins
-            - dosis
-            - oswald
-            - source sans pro
-            - "Open Sans"
-            - dm sans
-            - montserrat
-            - "Heebo"
-            - quicksand
-            - anton
-            - lora
     -
         id: letter-spacing-title
         title: Choose letter spacing for titles
@@ -1142,7 +1034,7 @@ settings:
         step: 100
     -
         id: pop
-        title: 5. Make pages pop (bold and italic accentuation, blockquotes, links)
+        title: 4. Make pages pop (bold and italic accentuation, blockquotes, links)
         type: heading
         level: 2
         collapsed: true
