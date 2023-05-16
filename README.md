@@ -1,4 +1,6 @@
 # obsidian-simplicity
+![Simplicity](https://github.com/Thiews/obsidian-simplicity/assets/29182877/a7f0b2d6-6d13-41e0-9d4e-a3bae35704e3)
+
 **Simplicity** is a minimal and highly customizable theme.
 
 ## Support my work
