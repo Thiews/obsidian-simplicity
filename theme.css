@@ -11,9 +11,6 @@ body{
 	--h3-weight:400;
 	--h4-weight:400;
 	--tab-outline-color:hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.08) !important;
-  --font-interface: "Avenir Next Cyr";
-  --font-text: "Avenir Next Cyr";
-  --font-title:"Avenir Next Cyr";
   --color-accent:#4F60B3;
   --titlebar-background:transparent !important;
   --titlebar-background-focused:transparent !important;
