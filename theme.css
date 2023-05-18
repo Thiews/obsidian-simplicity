@@ -736,6 +736,12 @@ body:not(.formatting-off) .cm-formatting-header,.cm-formatting-strong,.cm-format
 	opacity:0.1;
 }
 
+/* Dataview plugin */
+
+table.dataview tbody tr:hover{
+  --text-selection:rgba(0,0,0,0);
+}
+
 /* Zoom plugin */
 
 .zoom-plugin-delimiter,.zoom-plugin-title{
