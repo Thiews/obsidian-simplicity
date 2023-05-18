@@ -638,7 +638,6 @@ table:not(.calendar) th, table:not(.calendar) td {
 
 /* hr */
 
-
 hr{
 	border-top-color:hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.15) !important;
 }
@@ -655,6 +654,25 @@ hr{
 
 .markdown-embed-link{
   right:-5px;
+}
+
+/* Frontmatter section */
+
+span.frontmatter-section-data-item{
+  font-size:var(--font-smaller);
+}
+
+.frontmatter-section-label{
+  color:var(--color-accent);
+}
+
+.frontmatter-container-header{
+  border-bottom: 0px solid rgba(0,0,0,0) !important;
+}
+
+.frontmatter-container{
+  border-bottom:2px solid hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.15) !important;
+  margin-bottom:30px;
 }
 
 /* Search results */
