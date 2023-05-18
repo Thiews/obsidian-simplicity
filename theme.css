@@ -693,6 +693,15 @@ textarea:active, input[type='text']:active, input[type='search']:active, input[t
 	box-shadow: none !important;
 }
 
+.workspace-tabs.mod-top.mod-top-left-space .search-result{
+  margin:0px 15px;
+}
+
+.workspace-tabs.mod-top.mod-top-left-space .search-result .tree-item-self{
+  border-radius:0px;
+  border-bottom:1px solid hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.1) !important;
+  padding:20px 0px;
+}
 
 /* cm-formatting off*/
 
