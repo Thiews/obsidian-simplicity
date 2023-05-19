@@ -699,8 +699,15 @@ textarea:active, input[type='text']:active, input[type='search']:active, input[t
 
 .workspace-tabs.mod-top.mod-top-left-space .search-result .tree-item-self{
   border-radius:0px;
-  border-bottom:1px solid hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.1) !important;
+  border-top:1px solid hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.1) !important;
   padding:20px 0px;
+}
+
+.search-result .search-result-file-matches{
+  font-size:var(--font-smaller);
+  box-shadow:none;
+  color:var(--text-normal);
+  margin:10px 0px 10px 0px;
 }
 
 /* cm-formatting off*/
