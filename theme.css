@@ -1,5 +1,6 @@
 /* ----------- THEME SIMPLICITY made by Thiews ------------------- */
 
+
 /* Variables */
 
 body{
@@ -362,21 +363,48 @@ body:not(.nav-2) .nav-folder-title{
 	margin:0px 0px !important;
 }
 
-.mod-right-split .workspace-tab-header.is-active svg,.mod-left-split .workspace-tab-header.is-active svg{
+body:not(.light-tab-header) .mod-right-split .workspace-tab-header.is-active svg,body:not(.light-tab-header) .mod-left-split .workspace-tab-header.is-active svg{
 	color:#FFF !important;
 }
+
+.light-tab-header .mod-right-split .workspace-tab-header.is-active svg,.light-tab-header .mod-left-split .workspace-tab-header.is-active svg{
+	color:var(--color-accent) !important;
+}
+
+.light-tab-header .mod-right-split  .workspace-tab-header svg,.light-tab-header .mod-left-split  .workspace-tab-header svg{
+	color:var(--color-base-40);
+}
+
+.light-tab-header .mod-right-split  .workspace-tab-header:hover svg,.light-tab-header .mod-left-split  .workspace-tab-header:hover svg{
+	color:var(--color-accent);
+}
+
+.light-tab-header .mod-right-split  .workspace-tab-header-inner:hover,.light-tab-header .mod-left-split  .workspace-tab-header-inner:hover{
+	background-color: transparent !important;
+}
+
 .mod-right-split  .workspace-tab-header-container{
 	border-bottom:none !important;
 }
 
-.mod-right-split  .workspace-tab-header,.mod-left-split  .workspace-tab-header{
+body:not(.light-tab-header) .mod-right-split  .workspace-tab-header,body:not(.light-tab-header) .mod-left-split  .workspace-tab-header{
 	background-color: var(--color-base-00) !important;
 	box-shadow: 0px 0px 1px 1px var(--color-base-25);
 	margin-right:0.4em;
 }
 
-.mod-right-split  .workspace-tab-header.is-active,.mod-left-split  .workspace-tab-header.is-active{
+.light-tab-header .mod-right-split  .workspace-tab-header,.light-tab-header .mod-left-split  .workspace-tab-header{
+	background-color: transparent !important;
+	box-shadow: none;
+	margin-right:0.4em;
+}
+
+body:not(.light-tab-header) .mod-right-split  .workspace-tab-header.is-active,body:not(.light-tab-header) .mod-left-split  .workspace-tab-header.is-active{
 	background-color: var(--color-accent) !important;
+}
+
+.light-tab-header .mod-right-split  .workspace-tab-header.is-active,.light-tab-header .mod-left-split  .workspace-tab-header.is-active{
+	background-color: hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.08) !important;
 }
 
 .is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container:before{
@@ -638,6 +666,7 @@ table:not(.calendar) th, table:not(.calendar) td {
 
 /* hr */
 
+
 hr{
 	border-top-color:hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.15) !important;
 }
@@ -650,29 +679,16 @@ hr{
   box-shadow: 0px 0px 3px 1px var(--color-base-25);
 }
 
+/* Suggestion menu */
+
+.suggestion-menu{
+  background-color: var(--color-base-00);
+}
+
 /* block embed */
 
 .markdown-embed-link{
   right:-5px;
-}
-
-/* Frontmatter section */
-
-span.frontmatter-section-data-item{
-  font-size:var(--font-smaller);
-}
-
-.frontmatter-section-label{
-  color:var(--color-accent);
-}
-
-.frontmatter-container-header{
-  border-bottom: 0px solid rgba(0,0,0,0) !important;
-}
-
-.frontmatter-container{
-  border-bottom:2px solid hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.15) !important;
-  margin-bottom:30px;
 }
 
 /* Search results */
@@ -730,6 +746,24 @@ body:not(.formatting-off) .cm-formatting-header,.cm-formatting-strong,.cm-format
     border-radius: 10px;
 }
 
+/* Frontmatter section */
+span.frontmatter-section-data-item{
+  font-size:var(--font-smaller);
+}
+
+.frontmatter-section-label{
+  color:var(--color-accent);
+}
+
+.frontmatter-container-header{
+  border-bottom: 0px solid rgba(0,0,0,0) !important;
+}
+
+.frontmatter-container{
+  border-bottom:2px solid hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.15) !important;
+  margin-bottom:30px;
+}
+
 /* Calendar */
 
 .today{
@@ -752,17 +786,17 @@ body:not(.formatting-off) .cm-formatting-header,.cm-formatting-strong,.cm-format
 	opacity:0.1;
 }
 
-/* Dataview plugin */
-
-table.dataview tbody tr:hover{
-  --text-selection:rgba(0,0,0,0);
-}
-
 /* Zoom plugin */
 
 .zoom-plugin-delimiter,.zoom-plugin-title{
 	font-size:0.8em;
 	text-decoration: none;
+}
+
+/* Dataview plugin */
+
+table.dataview tbody tr:hover{
+  --text-selection:rgba(0,0,0,0);
 }
 
 /* Image grid */
@@ -908,7 +942,11 @@ settings:
         type: class-toggle
     -
         id: theme-rounded
-        title:  Active rounded style
+        title:  Activate rounded style
+        type: class-toggle
+    -
+        id: light-tab-header
+        title:  Activate a lighter tab header
         type: class-toggle
     -
         id: theme-black
