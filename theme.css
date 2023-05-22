@@ -46,7 +46,7 @@ body.theme-dark.theme-black{
   --background-secondary:#111 !important; 
 }
 
-.theme-dark:not(.theme-black,.theme-rounded) .workspace-ribbon.mod-left,.theme-dark:not(.theme-black,.theme-rounded) .workspace-tab-header.is-active,.theme-dark:not(.theme-black,.theme-rounded) .workspace-tab-header-container,.theme-dark.is-hidden-frameless:not(.is-fullscreen,.theme-black,.theme-rounded) .workspace-tabs.mod-top-left-space .workspace-tab-header-container:before,.theme-dark:not(.theme-black,.theme-rounded) .workspace-tab-header-inner{
+.theme-dark:not(.theme-black,.theme-rounded) .workspace-ribbon.mod-left,.theme-dark:not(.theme-black,.theme-rounded) .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active,.theme-dark:not(.theme-black,.theme-rounded) .workspace-tab-header-container,.theme-dark.is-hidden-frameless:not(.is-fullscreen,.theme-black,.theme-rounded) .workspace-tabs.mod-top-left-space .workspace-tab-header-container:before,.theme-dark:not(.theme-black,.theme-rounded) .workspace-tab-header-inner{
 	background-color: hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) * 0.25)) !important;
 }
 
@@ -69,7 +69,7 @@ body.theme-dark.theme-black{
   //--background-primary:hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.01) !important;
 }
 
-.theme-rounded.theme-light .mod-root .workspace-tab-header.is-active,.theme-rounded.theme-dark .mod-root .workspace-tab-header.is-active,.theme-rounded.theme-light .workspace-tab-header-container,.theme-rounded.theme-ght .workspace-ribbon.mod-left,.theme-rounded .workspace-tab-container,.theme-dark.theme-rounded:not(.theme-black) .workspace-split.mod-root .view-content{
+.theme-rounded.theme-light .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active,.theme-rounded.theme-dark .mod-root .workspace-tab-header.is-active,.theme-rounded.theme-light .workspace-tab-header-container,.theme-rounded.theme-light .workspace-ribbon.mod-left,.theme-rounded .workspace-tab-container,.theme-dark.theme-rounded:not(.theme-black) .workspace-split.mod-root .view-content{
   background-color:transparent !important;
   box-shadow:none !important;
 }
@@ -116,11 +116,15 @@ body.theme-dark.theme-black{
   border:12px solid transparent !important;
 }
 
+.theme-rounded .mod-root .mod-stacked .workspace-tab-header{
+	border-radius: 20px 0px 0px 20px !important;
+}
+
 .theme-rounded .workspace-leaf-resize-handle{
   border-color:transparent !important;
 }
 
-.theme-rounded.theme-light .workspace-leaf{
+.theme-rounded.theme-light .workspace-tabs:not(.mod-stacked) .workspace-leaf{
   border: 1px solid hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.22) !important;
   border-radius: 25px;
 }
@@ -138,7 +142,7 @@ body.theme-dark.theme-black{
   background-color:hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.05) !important; 
 }
 
-.theme-rounded.theme-dark.theme-black .workspace-tab-header-container{
+.theme-rounded.theme-dark.theme-black .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container{
   //background-color:hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.005) !important; 
   background-color: transparent !important;
 }
@@ -615,6 +619,12 @@ background-color: var(--color-accent)
 
 .cm-s-obsidian .cm-formatting-list,ol > li::marker{
 	color:var(--color-accent);
+}
+
+/* Check list */
+
+.checklist-round input[type=checkbox]{
+	--checkbox-radius:100%;
 }
 
 /* Quotes */
@@ -1113,6 +1123,16 @@ settings:
     -
         id: link-italic
         title:  Display links in italic
+        type: class-toggle
+    -
+        id: checkbox
+        title: Personalize checkboxes
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: checklist-round
+        title:  Display round checkboxes
         type: class-toggle
     -
         id: quote
