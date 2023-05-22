@@ -215,6 +215,10 @@ body:not(.theme-rounded) .workspace-ribbon.mod-left{
   	width: 17px;
   	margin-top:1.5px;
 	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='currentColor' stroke-linejoin='round' stroke-linecap='round' stroke-width='2'%3E%3Cpath d='M6 14l1.45-2.9A2 2 0 0 1 9.24 10H22a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H20a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E%0A");
+ }
+
+ .nav-folder-hue .nav-folder .nav-folder-collapse-indicator {
+ 	filter:hue-rotate(var(--hue-bold-italic));
 }
 
 .nav-folder{
@@ -223,6 +227,7 @@ body:not(.theme-rounded) .workspace-ribbon.mod-left{
 .nav-folder-title-content{
 	font-size:1.1em;
 }
+
 
 body:not(.nav-2) .nav-files-container{
 	padding:0 0 0 0 !important;
@@ -451,6 +456,10 @@ body:not(.nav-2) .tree-item.is-collapsed .nav-folder-title .nav-folder-title-con
 body .tree-item:not(.is-collapsed) .nav-folder-title .nav-folder-title-content{
 	color:var(--color-accent);
 	font-weight: 600;
+}
+
+.nav-folder-hue .tree-item:not(.is-collapsed) .nav-folder-title .nav-folder-title-content{
+	filter:hue-rotate(var(--hue-bold-italic)) !important;
 }
 
 body:not(.theme-rounded,.theme-light) .workspace-tab-header-container{
@@ -973,6 +982,10 @@ settings:
     -
         id: light-tab-header
         title:  Activate a lighter tab header
+        type: class-toggle
+    -
+        id: nav-folder-hue
+        title:  Change folder icon and name color to bold and italic color accent
         type: class-toggle
     -
         id: focus
