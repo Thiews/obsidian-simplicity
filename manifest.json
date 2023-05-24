@@ -1,7 +1,8 @@
 {
    "name": "Simplicity",
+   "version": "1.0.0",
+   "minAppVersion": "1.3.0",
    "author": "Thiews",
-   "repo": "Thiews/obsidian-simplicity",
-   "screenshot": "cover.png",
-   "modes": ["dark", "light"],
+   "authorUrl": "https://github.com/Thiews",
+   "fundingUrl": "https://www.buymeacoffee.com/thiews"
 }
