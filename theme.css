@@ -23,7 +23,7 @@ body{
 
 
 .theme-light {
-	--text-normal:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) * 0.45));
+	--text-normal:hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) * 0.35));
 	--color-accent:hsl(var(--accent-h),var(--accent-s),var(--accent-l)) !important;
 }
 
