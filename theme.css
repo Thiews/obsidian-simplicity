@@ -660,6 +660,9 @@ background-color: var(--color-accent)
 	border-left:0px solid #EEE !important;
 }
 
+body:not(.quote-border) blockquote,body:not(.quote-border) .HyperMD-quote:before{
+	border-left-width: 3px !important;
+}
 
 .quote-serif blockquote, .quote-serif .HyperMD-quote{
 	font-family:didot;
