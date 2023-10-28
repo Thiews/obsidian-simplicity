@@ -23,6 +23,14 @@ body{
   --file-line-width:700px;
 }
 
+body.theme-light{
+	  --text-highlight-bg:hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.1);
+}
+
+body.theme-dark{
+	  --text-highlight-bg:hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.4);
+}
+
 @media(min-width:900px){ body.theme-light:not(.theme-rounded) {
 	--background-secondary:hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.06) !important;
 }}
@@ -545,16 +553,16 @@ body:not(.theme-rounded,.theme-light) .workspace-tab-header-container{
 
 /* New note button */
 
-body:not(.new-note-button) .mod-top-left-space .nav-action-button:first-of-type:after{
+body:not(.new-note-button) .workspace-split:not(.mod-root) .mod-top-left-space .nav-action-button:first-of-type:after{
 	content:"New note";
 	margin-left:10px;
 }
 
-body:not(.new-note-button) .mod-top-left-space .nav-buttons-container{
+body:not(.new-note-button) .workspace-split:not(.mod-root) .mod-top-left-space .nav-buttons-container{
 	justify-content: left;
 }
 
-body:not(.new-note-button) .mod-top-left-space .nav-action-button:first-of-type{
+body:not(.new-note-button) .workspace-split:not(.mod-root) .mod-top-left-space .nav-action-button:first-of-type{
 	background-color: var(--color-accent);
 	color:#FFF;
 	border-radius:20px;
@@ -674,6 +682,14 @@ body.tag-background-transparent {
 background-color: var(--color-accent)
 }
 
+.HyperMD-list-line {
+	text-indent: -18px;
+    padding-inline-start: 16px;
+}
+
+.cm-formatting-list{
+	margin-right:10px;
+}
 
 /* Numbered list */
 
@@ -827,7 +843,7 @@ body:not(.formatting-off) .cm-formatting-header,.cm-formatting-strong,.cm-format
 	color:var(--color-accent);
 }
 
-.formatting-off .cm-formatting-header,.formatting-off .cm-formatting-strong,.formatting-off .cm-formatting-em{
+.formatting-off .cm-formatting-header,.formatting-off .cm-formatting-strong,.formatting-off .cm-formatting-em,.cm-formatting-highlight{
 	display:none;
 }
 
