@@ -11,10 +11,16 @@ body{
 	--h2-weight:400;
 	--h3-weight:400;
 	--h4-weight:400;
+	--h1-size:2em;
+	--h2-size:1.5em;
+	--h3-size:1.2em;
+	--h4-size:1.1em;
 	--tab-outline-color:hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.08) !important;
   --color-accent:#4F60B3;
   --titlebar-background:transparent !important;
   --titlebar-background-focused:transparent !important;
+  --line-height-normal:var(--line-height-value);
+  --file-line-width:700px;
 }
 
 @media(min-width:900px){ body.theme-light:not(.theme-rounded) {
@@ -148,7 +154,13 @@ body.theme-dark.theme-black{
 }
 
 
-/* Full width page */
+/* Page width*/
+
+@media(min-width:900px){
+	body{
+		--file-line-width:var(--file-line-width-value);
+	}
+}
 
 .full-width{
 	--file-line-width:95% !important;
@@ -196,6 +208,16 @@ body:not(.theme-rounded) .workspace-ribbon.mod-left{
 
 .clickable-icon.side-dock-ribbon-action{
 	color:var(--color-accent);
+}
+
+.view-header-off .view-header{
+	opacity:0;
+	transition:0.2s;
+}
+
+.view-header-off .view-header:hover{
+	opacity:1;
+	transition:0.2s;
 }
 
 /* Navigation file menu */
@@ -554,6 +576,8 @@ body:not(.title-underline) .HyperMD-header{
   letter-spacing: var(--letter-spacing-title) !important;
 }
 
+
+
 /* Bold and italic */
 .bold-italic-accent .cm-em, .bold-italic-accent .cm-strong,.bold-italic-accent em,.bold-italic-accent strong{
 	color:var(--color-accent) !important;
@@ -594,26 +618,21 @@ body:not(.title-underline) .HyperMD-header{
   position: relative;
   background-size: 100%;
   background-repeat: no-repeat;
-  top: -0.09rem;
-  margin-right: 0.2rem;
+  //top: -0.05rem;
+  margin-right: 0.4rem;
   padding-right: 1.2rem;
-  background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiM4NTg1ODUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEwLjk0NCAxLjI1aDIuMTEyYzEuODM4IDAgMy4yOTQgMCA0LjQzMy4xNTNjMS4xNzIuMTU4IDIuMTIxLjQ5IDIuODcgMS4yMzhjLjc0OC43NDkgMS4wOCAxLjY5OCAxLjIzOCAyLjg3Yy4xNTMgMS4xNC4xNTMgMi41OTUuMTUzIDQuNDMzdjQuMTEyYzAgMS44MzggMCAzLjI5NC0uMTUzIDQuNDMzYy0uMTU4IDEuMTcyLS40OSAyLjEyMS0xLjIzOCAyLjg3Yy0uNzQ5Ljc0OC0xLjY5OCAxLjA4LTIuODcgMS4yMzhjLTEuMTQuMTUzLTIuNTk1LjE1My00LjQzMy4xNTNoLTIuMTEyYy0xLjgzOCAwLTMuMjk0IDAtNC40MzMtLjE1M2MtMS4xNzItLjE1OC0yLjEyMS0uNDktMi44Ny0xLjIzOGMtLjc0OC0uNzQ5LTEuMDgtMS42OTgtMS4yMzgtMi44N2MtLjE1My0xLjE0LS4xNTMtMi41OTUtLjE1My00LjQzM1Y5Ljk0NGMwLTEuODM4IDAtMy4yOTQuMTUzLTQuNDMzYy4xNTgtMS4xNzIuNDktMi4xMjEgMS4yMzgtMi44N2MuNzQ5LS43NDggMS42OTgtMS4wOCAyLjg3LTEuMjM4YzEuMTQtLjE1MyAyLjU5NS0uMTUzIDQuNDMzLS4xNTNaTTYuNzEgMi44OWMtMS4wMDYuMTM1LTEuNTg2LjM4OS0yLjAxLjgxMmMtLjQyMi40MjMtLjY3NiAxLjAwMy0uODExIDIuMDA5Yy0uMTM4IDEuMDI4LS4xNCAyLjM4Mi0uMTQgNC4yODl2NGMwIDEuOTA3LjAwMiAzLjI2Mi4xNCA0LjI5Yy4xMzUgMS4wMDUuMzg5IDEuNTg1LjgxMiAyLjAwOGMuNDIzLjQyMyAxLjAwMy42NzcgMi4wMDkuODEyYzEuMDI4LjEzOCAyLjM4Mi4xNCA0LjI4OS4xNGgyYzEuOTA3IDAgMy4yNjItLjAwMiA0LjI5LS4xNGMxLjAwNS0uMTM1IDEuNTg1LS4zODkgMi4wMDgtLjgxMmMuNDIzLS40MjMuNjc3LTEuMDAzLjgxMi0yLjAwOWMuMTM4LTEuMDI3LjE0LTIuMzgyLjE0LTQuMjg5di00YzAtMS45MDctLjAwMi0zLjI2MS0uMTQtNC4yOWMtLjEzNS0xLjAwNS0uMzg5LTEuNTg1LS44MTItMi4wMDhjLS40MjMtLjQyMy0xLjAwMy0uNjc3LTIuMDA5LS44MTJjLTEuMDI3LS4xMzgtMi4zODItLjE0LTQuMjg5LS4xNGgtMmMtMS45MDcgMC0zLjI2MS4wMDItNC4yOS4xNFpNNy4yNSA4QS43NS43NSAwIDAgMSA4IDcuMjVoOGEuNzUuNzUgMCAwIDEgMCAxLjVIOEEuNzUuNzUgMCAwIDEgNy4yNSA4Wm0wIDRhLjc1Ljc1IDAgMCAxIC43NS0uNzVoOGEuNzUuNzUgMCAwIDEgMCAxLjVIOGEuNzUuNzUgMCAwIDEtLjc1LS43NVptMCA0YS43NS43NSAwIDAgMSAuNzUtLjc1aDVhLjc1Ljc1IDAgMCAxIDAgMS41SDhhLjc1Ljc1IDAgMCAxLS43NS0uNzVaIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=");
+  background-color:var(--color-accent);
+  -webkit-mask-box-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiM4NTg1ODUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEwLjk0NCAxLjI1aDIuMTEyYzEuODM4IDAgMy4yOTQgMCA0LjQzMy4xNTNjMS4xNzIuMTU4IDIuMTIxLjQ5IDIuODcgMS4yMzhjLjc0OC43NDkgMS4wOCAxLjY5OCAxLjIzOCAyLjg3Yy4xNTMgMS4xNC4xNTMgMi41OTUuMTUzIDQuNDMzdjQuMTEyYzAgMS44MzggMCAzLjI5NC0uMTUzIDQuNDMzYy0uMTU4IDEuMTcyLS40OSAyLjEyMS0xLjIzOCAyLjg3Yy0uNzQ5Ljc0OC0xLjY5OCAxLjA4LTIuODcgMS4yMzhjLTEuMTQuMTUzLTIuNTk1LjE1My00LjQzMy4xNTNoLTIuMTEyYy0xLjgzOCAwLTMuMjk0IDAtNC40MzMtLjE1M2MtMS4xNzItLjE1OC0yLjEyMS0uNDktMi44Ny0xLjIzOGMtLjc0OC0uNzQ5LTEuMDgtMS42OTgtMS4yMzgtMi44N2MtLjE1My0xLjE0LS4xNTMtMi41OTUtLjE1My00LjQzM1Y5Ljk0NGMwLTEuODM4IDAtMy4yOTQuMTUzLTQuNDMzYy4xNTgtMS4xNzIuNDktMi4xMjEgMS4yMzgtMi44N2MuNzQ5LS43NDggMS42OTgtMS4wOCAyLjg3LTEuMjM4YzEuMTQtLjE1MyAyLjU5NS0uMTUzIDQuNDMzLS4xNTNaTTYuNzEgMi44OWMtMS4wMDYuMTM1LTEuNTg2LjM4OS0yLjAxLjgxMmMtLjQyMi40MjMtLjY3NiAxLjAwMy0uODExIDIuMDA5Yy0uMTM4IDEuMDI4LS4xNCAyLjM4Mi0uMTQgNC4yODl2NGMwIDEuOTA3LjAwMiAzLjI2Mi4xNCA0LjI5Yy4xMzUgMS4wMDUuMzg5IDEuNTg1LjgxMiAyLjAwOGMuNDIzLjQyMyAxLjAwMy42NzcgMi4wMDkuODEyYzEuMDI4LjEzOCAyLjM4Mi4xNCA0LjI4OS4xNGgyYzEuOTA3IDAgMy4yNjItLjAwMiA0LjI5LS4xNGMxLjAwNS0uMTM1IDEuNTg1LS4zODkgMi4wMDgtLjgxMmMuNDIzLS40MjMuNjc3LTEuMDAzLjgxMi0yLjAwOWMuMTM4LTEuMDI3LjE0LTIuMzgyLjE0LTQuMjg5di00YzAtMS45MDctLjAwMi0zLjI2MS0uMTQtNC4yOWMtLjEzNS0xLjAwNS0uMzg5LTEuNTg1LS44MTItMi4wMDhjLS40MjMtLjQyMy0xLjAwMy0uNjc3LTIuMDA5LS44MTJjLTEuMDI3LS4xMzgtMi4zODItLjE0LTQuMjg5LS4xNGgtMmMtMS45MDcgMC0zLjI2MS4wMDItNC4yOS4xNFpNNy4yNSA4QS43NS43NSAwIDAgMSA4IDcuMjVoOGEuNzUuNzUgMCAwIDEgMCAxLjVIOEEuNzUuNzUgMCAwIDEgNy4yNSA4Wm0wIDRhLjc1Ljc1IDAgMCAxIC43NS0uNzVoOGEuNzUuNzUgMCAwIDEgMCAxLjVIOGEuNzUuNzUgMCAwIDEtLjc1LS43NVptMCA0YS43NS43NSAwIDAgMSAuNzUtLjc1aDVhLjc1Ljc1IDAgMCAxIDAgMS41SDhhLjc1Ljc1IDAgMCAxLS43NS0uNzVaIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=");
 }
 
 
 /* Bullet list */
 
-.markdown-source-view.mod-cm6 .cm-content > .cm-line.HyperMD-list-line{
-	margin-left:0.5em !important;
-}
 
 .list-bullet:after{
 background-color: var(--color-accent)
 }
 
-.cm-s-obsidian .cm-formatting-list{
-	margin-right:0.5em !important;
-}
 
 /* Numbered list */
 
@@ -962,6 +981,24 @@ settings:
         title:  Black background for dark theme
         type: class-toggle
     -
+        id: line-height-value
+        title: Choose line height for body text
+        type: variable-number-slider
+        default: 2
+        min: 1
+        max: 4
+        step: 0.2
+        format: em
+    -
+        id: file-line-width-value
+        title: Choose line width
+        type: variable-number-slider
+        default: 700
+        min: 500
+        max: 1600
+        step: 1
+        format: px
+    -
         id: navigation-ui
         title: 2. Navigation UI customization
         type: heading
@@ -1000,6 +1037,10 @@ settings:
     -
         id: tab-header-off
         title:  Hide the Tab header
+        type: class-toggle
+    -
+        id: view-header-off
+        title:  Hide the View header
         type: class-toggle
     -
         id: formatting-off
@@ -1042,6 +1083,15 @@ settings:
         max: 800
         step: 100
     -
+        id: h1-size
+        title: Choose H1 font size
+        type: variable-number-slider
+        default: 2
+        min: 0.2
+        max: 6
+        step: 0.1
+        format: em
+    -
         id: h2-weight
         title: Choose H2 font weight
         type: variable-number-slider
@@ -1049,6 +1099,15 @@ settings:
         min: 300
         max: 800
         step: 100
+    -
+        id: h2-size
+        title: Choose H2 font size
+        type: variable-number-slider
+        default: 1.5
+        min: 0.2
+        max: 6
+        step: 0.1
+        format: em
     -
         id: h3-weight
         title: Choose H3 font weight
@@ -1058,6 +1117,15 @@ settings:
         max: 800
         step: 100
     -
+        id: h3-size
+        title: Choose H3 font size
+        type: variable-number-slider
+        default: 1.2
+        min: 0.2
+        max: 6
+        step: 0.1
+        format: em
+    -
         id: h4-weight
         title: Choose H4 font weight
         ttype: variable-number-slider
@@ -1065,6 +1133,15 @@ settings:
         min: 300
         max: 800
         step: 100
+    -
+        id: h4-size
+        title: Choose H4 font size
+        type: variable-number-slider
+        default: 1.1
+        min: 0.2
+        max: 6
+        step: 0.1
+        format: em
     -
         id: pop
         title: 5. Make pages pop (bold and italic accentuation, blockquotes, links)
