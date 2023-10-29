@@ -286,28 +286,32 @@ content: "";
 }
 
 
-body:not(.nav-2) .nav-files-container{
+.nav-1 .nav-files-container{
 	padding:0 0 0 0 !important;
 }
 .nav-2 .nav-files-container{
 	padding:0 0 0 0.2em !important;
 }
 
-body:not(.nav-2,.theme-rounded) .nav-folder.mod-root .nav-folder > .nav-folder-children{
+body:not(.theme-rounded).nav-1 .nav-folder.mod-root .nav-folder > .nav-folder-children{
 	margin:0 !important;
 	padding:0px !important;
 	background-color: hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.05);
 }
 
-.nav-folder.mod-root .nav-folder > .nav-folder-children,.tree-item-children{
+body:not(.classic) .nav-folder.mod-root .nav-folder > .nav-folder-children,body:not(.classic) .tree-item-children{
 	border-left:0px solid !important;
+}
+
+.classic .nav-folder.mod-root .nav-folder > .nav-folder-children,.classic .tree-item-children{
+	border-left:1px solid var(--color-accent);
 }
 
 .nav-2:not(.theme-rounded) .nav-folder.mod-root .nav-folder > .nav-folder-children{
 	border-left:3px solid var(--color-accent) !important;
 }
 
-body:not(.nav-2) .nav-file-title{
+.nav-1 .nav-file-title{
 	margin-bottom:0px !important;
 	padding:10px 0 !important;
 }
@@ -317,16 +321,23 @@ body:not(.nav-2) .nav-file-title{
 	padding:10px !important;	
 }
 
-.nav-file-title-content{
+body:not(.trim) .nav-file-title-content{
 	white-space: normal !important;
+}
+
+.classic .nav-file-title-content{
+	padding:5px 0px;
+}
+
+body:not(.classic) .nav-file-title-content{
 	padding:10px;
 }
 
-body:not(.nav-2,.theme-rounded) .nav-file-title{
-	border-top: 1px solid hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.06);
+body:not(.theme-rounded).nav-1 .nav-file-title{
+	border-top: 2px solid hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.06);
 }
 
-.theme-rounded:not(.nav-2) .nav-file-title{
+.theme-rounded.nav-1 .nav-file-title{
   border-top: 1px solid hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.2);
 }
 
@@ -339,7 +350,7 @@ body:not(.nav-2,.theme-rounded) .nav-file-title{
 	padding-left:0px !important;
 }
 
-body:not(.nav-2) .nav-file{
+.nav-1 .nav-file{
 	//border-top: 1px solid hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.06);
 	border-radius:0px !important;
 	//padding-left:3.5em;
@@ -379,21 +390,23 @@ body:not(.nav-2) .nav-file{
   --nav-item-background-hover:hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.03) !important;
 }
 
-body.theme-light:not(.nav-2) .tree-item-self.is-active,body.theme-light:not(.nav-2) .tree-item-self:hover{
-	background-color: hsla(var(--accent-h),var(--accent-s),var(--accent-s),0.1) !important;
+.classic .nav-file-title.is-active{
+	background-color: hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.1) !important;;
+}
 
+body.theme-light.nav-1 .tree-item-self.is-active,body.theme-light.nav-1 .tree-item-self:hover{
+	background-color: hsla(var(--accent-h),var(--accent-s),var(--accent-s),0.1) !important;
 	border-radius:0px !important;
 	color:var(--color-accent) !important;
 	font-weight:400 !important;
 }
 
-body.theme-light:not(.nav-2) .tree-item-self.is-active,body.theme-dark:not(.nav-2) .tree-item-self.is-active{
+body.theme-light.nav-1 .tree-item-self.is-active,body.theme-dark.nav-1 .tree-item-self.is-active{
     border-right:5px solid var(--color-accent) !important;
 }
 
-body.theme-dark:not(.nav-2) .tree-item-self.is-active,body.theme-dark:not(.nav-2) .tree-item-self:hover{
+body.theme-dark.nav-1 .tree-item-self.is-active,body.theme-dark.nav-1 .tree-item-self:hover{
   background-color: hsla(var(--accent-h),var(--accent-s),var(--accent-s),0.04) !important;
-
   border-radius:0px !important;
   color:var(--color-accent) !important;
   font-weight:400 !important;
@@ -426,7 +439,7 @@ body .tree-item-self:hover{
 	display:none;
 }
 
-body:not(.nav-2) .nav-folder-title{
+body.nav-1 .nav-folder-title{
 	padding-left:40px !important;
 }
 
@@ -447,7 +460,7 @@ body:not(.nav-2) .nav-folder-title{
 	color:var(--color-accent);
 }
 
-body:not(.nav-2) .tree-item.is-collapsed .nav-folder-title .nav-folder-title-content{
+body.nav-1 .tree-item.is-collapsed .nav-folder-title .nav-folder-title-content{
 	font-weight:400 !important;
 	color:var(--color-base-100) !important;
 }
@@ -1143,8 +1156,18 @@ settings:
         level: 2
         collapsed: true
     -
-        id: nav-2
-        title:  Other folder navigation panel style
+        id: nav
+        title:  Choose folder navigation panel style
+        type: class-select
+        allowEmpty: false
+        default: tab-header-1
+        options:
+            - classic
+            - nav-1
+            - nav-2
+    -
+        id: trim
+        title:  Don't show full file name
         type: class-toggle
     -
         id: new-note-button
