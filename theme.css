@@ -1230,7 +1230,7 @@ settings:
     -
         id: h4-weight
         title: Choose H4 font weight
-        ttype: variable-number-slider
+        type: variable-number-slider
         default: 400
         min: 300
         max: 800
