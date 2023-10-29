@@ -1,6 +1,5 @@
 /* ----------- THEME SIMPLICITY made by Thiews ------------------- */
 
-
 /* Variables */
 
 body{
@@ -186,8 +185,8 @@ body.theme-dark.theme-black{
 }
 
 .full-width.markdown-preview-view.is-readable-line-width .markdown-preview-sizer>div, .full-width.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer.cm-contentContainer>.cm-content>div, .fullwidth.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer>.embedded-backlinks, .full-width.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer>.inline-title{
-width:100%;
-max-width:100%;
+width:100%  !important;
+max-width:100% !important;
 }
 
 
@@ -431,63 +430,10 @@ body:not(.nav-2) .nav-folder-title{
 	padding-left:40px !important;
 }
 
-
 .mod-root .workspace-tab-header-inner{
 	background:transparent !important;
 	box-shadow: 0px 0px 0px transparent !important;
 	margin:0px 0px !important;
-}
-
-body:not(.light-tab-header) .mod-right-split .workspace-tab-header.is-active svg,body:not(.light-tab-header) .mod-left-split .workspace-tab-header.is-active svg{
-	color:#FFF !important;
-}
-
-.light-tab-header .mod-right-split .workspace-tab-header.is-active svg,.light-tab-header .mod-left-split .workspace-tab-header.is-active svg{
-	color:var(--color-accent) !important;
-}
-
-.light-tab-header .mod-right-split  .workspace-tab-header svg,.light-tab-header .mod-left-split  .workspace-tab-header svg{
-	color:var(--color-base-40);
-}
-
-.light-tab-header .mod-right-split  .workspace-tab-header:hover svg,.light-tab-header .mod-left-split  .workspace-tab-header:hover svg{
-	color:var(--color-accent);
-}
-
-.light-tab-header .mod-right-split  .workspace-tab-header-inner:hover,.light-tab-header .mod-left-split  .workspace-tab-header-inner:hover{
-	background-color: transparent !important;
-}
-
-.mod-right-split  .workspace-tab-header-container{
-	border-bottom:none !important;
-}
-
-body:not(.light-tab-header) .mod-right-split  .workspace-tab-header,body:not(.light-tab-header) .mod-left-split  .workspace-tab-header{
-	background-color: var(--color-base-00) !important;
-	box-shadow: 0px 0px 1px 1px var(--color-base-25);
-	margin-right:0.4em;
-}
-
-.light-tab-header .mod-right-split  .workspace-tab-header,.light-tab-header .mod-left-split  .workspace-tab-header{
-	background-color: transparent !important;
-	box-shadow: none;
-	margin-right:0.4em;
-}
-
-body:not(.light-tab-header) .mod-right-split  .workspace-tab-header.is-active,body:not(.light-tab-header) .mod-left-split  .workspace-tab-header.is-active{
-	background-color: var(--color-accent) !important;
-}
-
-.light-tab-header .mod-right-split  .workspace-tab-header.is-active,.light-tab-header .mod-left-split  .workspace-tab-header.is-active{
-	background-color: hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.08) !important;
-}
-
-.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container:before{
-	background-color:transparent !important;
-}
-
-.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container{
-	padding-left:80px !important;
 }
 
  .workspace-split.mod-horizontal.mod-left-split .mod-top-left-space .workspace-leaf:before{
@@ -574,19 +520,95 @@ body:not(.theme-rounded,.theme-light) .workspace-tab-header-container{
 	margin-top:10px;
 }
 
+/* tab header */
+
+.tab-header-1 .mod-right-split .workspace-tab-header.is-active svg,.tab-header-1 .mod-left-split .workspace-tab-header.is-active svg{
+	//color:#FFF !important;
+	color:var(--color-accent);
+}
+
+.tab-header-2 .mod-right-split .workspace-tab-header.is-active svg,.tab-header-2 .mod-left-split .workspace-tab-header.is-active svg{
+	color:var(--color-accent) !important;
+}
+
+.tab-header-2 .mod-right-split  .workspace-tab-header svg,.tab-header-2 .mod-left-split  .workspace-tab-header svg{
+	color:var(--color-base-40);
+}
+
+.tab-header-2 .mod-right-split  .workspace-tab-header:hover svg,.tab-header-2 .mod-left-split  .workspace-tab-header:hover svg{
+	color:var(--color-accent);
+}
+
+.tab-header-2 .mod-right-split  .workspace-tab-header-inner:hover,.tab-header-2 .mod-left-split  .workspace-tab-header-inner:hover{
+	background-color: transparent !important;
+}
+
+.mod-right-split  .workspace-tab-header-container{
+	border-bottom:none !important;
+}
+
+
+.tab-header-1 .mod-right-split  .workspace-tab-header,.tab-header-1 .mod-left-split  .workspace-tab-header{
+	background-color: var(--color-base-00);
+	//box-shadow: 0px 0px 1px 1px var(--color-base-25);
+	box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.08) !important;
+	margin-right:0.4em;
+	border-radius: 5px;
+	padding:5px 3px;
+}
+
+.tab-header-2 .mod-right-split  .workspace-tab-header,.tab-header-2 .mod-left-split  .workspace-tab-header{
+	background-color: transparent !important;
+	box-shadow: none;
+	margin-right:0.4em;
+}
+
+.tab-header-1 .mod-right-split  .workspace-tab-header.is-active,.tab-header-1 .mod-left-split  .workspace-tab-header.is-active{
+	//background-color: var(--color-accent) !important;
+}
+
+.tab-header-2 .mod-right-split  .workspace-tab-header.is-active,.tab-header-2 .mod-left-split  .workspace-tab-header.is-active{
+	background-color: hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.08) !important;
+}
+
+.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container:before{
+	background-color:transparent !important;
+}
+
+.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container{
+	padding-left:80px !important;
+}
+
+.tab-header-3 .mod-right-split  .workspace-tab-header.is-active,.tab-header-3 .mod-left-split  .workspace-tab-header.is-active{
+	border-bottom: 3px solid var(--color-accent);
+	background: transparent;
+	border-radius: 0px;
+}
+
+.tab-header-3 .mod-right-split  .workspace-tab-header,.tab-header-3 .mod-left-split  .workspace-tab-header{
+	margin-right:20px;
+	padding-bottom:8px;
+}
+.tab-header-3 .mod-right-split  .workspace-tab-header.is-active svg,.tab-header-3 .mod-left-split  .workspace-tab-header.is-active svg{
+	color:var(--text-normal);
+}
+
+.tab-header-3 .mod-right-split  .workspace-tab-header svg,.tab-header-3 .mod-left-split  .workspace-tab-header svg{
+	color:var(--color-base-40);
+}
 
 /* New note button */
 
-body:not(.new-note-button) .workspace-split:not(.mod-root) .mod-top-left-space .nav-action-button:first-of-type:after{
+body:not(.new-note-button) .workspace-split:not(.mod-root) .mod-top-left-space .workspace-leaf-content[data-type="file-explorer"] .nav-action-button:first-of-type:after{
 	content:"New note";
 	margin-left:10px;
 }
 
-body:not(.new-note-button) .workspace-split:not(.mod-root) .mod-top-left-space .nav-buttons-container{
+body:not(.new-note-button) .workspace-split:not(.mod-root) .mod-top-left-space .workspace-leaf-content[data-type="file-explorer"] .nav-buttons-container{
 	justify-content: left;
 }
 
-body:not(.new-note-button) .workspace-split:not(.mod-root) .mod-top-left-space .nav-action-button:first-of-type{
+body:not(.new-note-button) .workspace-split:not(.mod-root) .mod-top-left-space .workspace-leaf-content[data-type="file-explorer"] .nav-action-button:first-of-type{
 	background-color: var(--color-accent);
 	color:#FFF;
 	border-radius:20px;
@@ -610,13 +632,10 @@ body:not(.new-note-button) .workspace-split:not(.mod-root) .mod-top-left-space .
 
 /* Title */
 
-.markdown-source-view.mod-cm6 .cm-content > *{
-	margin:x !important;
-}
 
-body:not(.title-underline) .HyperMD-header{
-	padding-bottom: 0.7em !important;
-	padding-top:0.8em !important;
+body .HyperMD-header,.cm-header{
+	margin-bottom: 1em !important;/*0.7*/
+	margin-top:1em !important;/*0.8*/
 }
 
 .HyperMD-header >* .HyperMD-header{
@@ -632,11 +651,15 @@ body:not(.title-underline) .HyperMD-header{
   color:var(--color-accent);
 }
 
-.title-underline .HyperMD-header,.title-underline h1,.title-underline h2,.title-underline h3,.title-underline h4,.title-underline h5,.title-underline h6{
+.title-underline .HyperMD-header{
 	border-bottom:2px solid hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.1);
-	padding-bottom:0.4em !important;
-	margin-bottom:0.5em !important;
-	padding-top:1.5rem !important;
+	padding-bottom:0.7rem !important;
+}
+
+.title-underline h1,.title-underline h2,.title-underline h3,.title-underline h4,.title-underline h5,.title-underline h6{
+	border-bottom:2px solid hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.1);
+	padding-bottom:0.8em !important;
+	padding-top:0.4em !important;
 }
 
 
@@ -727,6 +750,10 @@ background-color: var(--color-accent)
 }
 
 /* Quotes */
+
+blockquote,.HyperMD-quote:not(:first-of-type){
+	padding:20px 25px !important;
+}
 
 .quote-italic blockquote,.quote-italic .HyperMD-quote{
 	font-style:italic !important;
@@ -975,6 +1002,10 @@ table.dataview tbody tr:hover{
   }
 }
 
+/* Image border radius */
+.image-radius img{
+	border-radius:20px;
+}
 
 /* Image zoom  */
 
@@ -1115,9 +1146,15 @@ settings:
         title:  Show icon file in navigation panel
         type: class-toggle
     -
-        id: light-tab-header
-        title:  Activate a lighter tab header
-        type: class-toggle
+        id: tab-header
+        title:  Choose the tab header style
+        type: class-select
+        allowEmpty: false
+        default: tab-header-1
+        options:
+            - tab-header-1
+            - tab-header-2
+            - tab-header-3
     -
         id: nav-folder-hue
         title:  Change folder icon and name color to bold and italic color accent
@@ -1334,6 +1371,20 @@ settings:
     -
         id: quote-serif
         title:  Display quotes with a serif font
+        type: class-toggle
+    -
+        id: Images
+        title: Personalize images
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: image-radius
+        title:  Display images with border radius
+        type: class-toggle
+    -
+        id: zoom-off
+        title:  Desactivate zoom of an image when clicking
         type: class-toggle
     -
         id: Extra
