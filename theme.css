@@ -633,9 +633,18 @@ body:not(.new-note-button) .workspace-split:not(.mod-root) .mod-top-left-space .
 /* Title */
 
 
-body .HyperMD-header,.cm-header{
+.HyperMD-header{
+	padding-top:1.4em !important;
+}
+
+.HyperMD-header:after{
+	content:"";
+	display: block;
 	margin-bottom: 1em !important;/*0.7*/
-	margin-top:1em !important;/*0.8*/
+}
+
+.title-underline .HyperMD-header:after{
+	padding-top: 0.7rem !important;
 }
 
 .HyperMD-header >* .HyperMD-header{
@@ -651,9 +660,9 @@ body .HyperMD-header,.cm-header{
   color:var(--color-accent);
 }
 
-.title-underline .HyperMD-header{
+.title-underline .HyperMD-header:after{
 	border-bottom:2px solid hsla(var(--accent-h),var(--accent-s),var(--accent-l),0.1);
-	padding-bottom:0.7rem !important;
+	//padding-bottom:0.7rem !important;
 }
 
 .title-underline h1,.title-underline h2,.title-underline h3,.title-underline h4,.title-underline h5,.title-underline h6{
