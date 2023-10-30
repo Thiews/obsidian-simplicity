@@ -137,7 +137,10 @@ body.theme-dark.theme-black{
 
 .theme-rounded .workspace-tab-container{
   border-radius: 30px;
-  border:12px solid transparent !important;
+  border-top:13px solid transparent !important;
+  border-right:13px solid transparent !important;
+  border-bottom:18px solid transparent !important;
+  border-left:13px solid transparent !important;
 }
 
 .theme-rounded .mod-root .mod-stacked .workspace-tab-header{
@@ -347,7 +350,7 @@ body:not(.theme-rounded).nav-1 .nav-file-title{
 
 .nav-2 .tree-item-children,.nav-2 .nav-folder-children{
 	background-color: transparent !important;
-	padding-left:0px !important;
+	padding-left:10px !important;
 }
 
 .nav-1 .nav-file{
@@ -536,8 +539,8 @@ body:not(.theme-rounded,.theme-light) .workspace-tab-header-container{
 /* tab header */
 
 .tab-header-1 .mod-right-split .workspace-tab-header.is-active svg,.tab-header-1 .mod-left-split .workspace-tab-header.is-active svg{
-	//color:#FFF !important;
-	color:var(--color-accent);
+	color:#FFF !important;
+	//color:var(--color-accent);
 }
 
 .tab-header-2 .mod-right-split .workspace-tab-header.is-active svg,.tab-header-2 .mod-left-split .workspace-tab-header.is-active svg{
@@ -563,11 +566,11 @@ body:not(.theme-rounded,.theme-light) .workspace-tab-header-container{
 
 .tab-header-1 .mod-right-split  .workspace-tab-header,.tab-header-1 .mod-left-split  .workspace-tab-header{
 	background-color: var(--color-base-00);
-	//box-shadow: 0px 0px 1px 1px var(--color-base-25);
-	box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.08) !important;
+	box-shadow: 1px 2px 3px 0px var(--color-base-25);
+	//box-shadow: 5px 5px 10px -3px var(--color-base-25) !important;
 	margin-right:0.4em;
 	border-radius: 5px;
-	padding:5px 3px;
+	padding:2px 0px;
 }
 
 .tab-header-2 .mod-right-split  .workspace-tab-header,.tab-header-2 .mod-left-split  .workspace-tab-header{
@@ -577,7 +580,7 @@ body:not(.theme-rounded,.theme-light) .workspace-tab-header-container{
 }
 
 .tab-header-1 .mod-right-split  .workspace-tab-header.is-active,.tab-header-1 .mod-left-split  .workspace-tab-header.is-active{
-	//background-color: var(--color-accent) !important;
+	background-color: var(--color-accent) !important;
 }
 
 .tab-header-2 .mod-right-split  .workspace-tab-header.is-active,.tab-header-2 .mod-left-split  .workspace-tab-header.is-active{
@@ -609,6 +612,14 @@ body:not(.theme-rounded,.theme-light) .workspace-tab-header-container{
 .tab-header-3 .mod-right-split  .workspace-tab-header svg,.tab-header-3 .mod-left-split  .workspace-tab-header svg{
 	color:var(--color-base-40);
 }
+.tab-header-3 .mod-right-split  .workspace-tab-header:hover svg,.tab-header-3 .mod-left-split  .workspace-tab-header:hover svg{
+	color:var(--color-accent);
+}
+
+.tab-header-3 .mod-right-split  .workspace-tab-header-inner:hover,.tab-header-3 .mod-left-split  .workspace-tab-header-inner:hover {
+	background-color: transparent !important;
+}
+
 
 /* New note button */
 
